@@ -53,13 +53,13 @@ After refactoring the 2018 ran in .148 seconds.
   
  ### Refactoring Advantages and Disadvantages of Refactoring
   
-Advantages of refactoring code include taking time to add functionality, remove code that may not be required for current functionality, increade efficency of the algorith (hindsight IS 20/20 after all) and it is a great time to improve the quantity and quality of comments along the way.
+Advantages of refactoring code include taking time to add functionality, remove code that may not be required for current functionality, increase efficency of the algorith (hindsight IS 20/20 after all) and it is a great time to improve the quantity and quality of comments along the way.
   
 The disadvantages of refactoring lie in the amount of time required (its very hard to have a accurate estimate going in) and the chance that the code may become broken.  Broken code will take even more time just to get back to where the code started.
   
 ### Pros and Cons of Refactoring the Original "All Stocks Analysis" Macro
   
-The most obvious advantage of the refactoring that occured in this code, in my opinion, was the formatting improvements.  It was easy to see the results and wasn't an excess amount of coding.  The fact that it ran faster is a nice feature but they both took less than a second.  Not significant enough to warrant an investment of time unless perhaps the intention is to use the algotithm to to analyze much larger data sets.  (The real advantage for us students was learning and practicing write VBA to accomplish a goal!)  
+The most obvious advantage of the refactoring that occured in this code, in my opinion, was the formatting improvements.  It was easy to see the results and wasn't an excessive amount of coding.  The fact that it ran faster is a nice feature but they both took less than a second.  Not significant enough to warrant an investment of time unless perhaps the intention is to use the algotithm to to analyze much larger data sets.  (The real advantage for us students was learning and practicing write VBA to accomplish a goal!)  
   
 The downside is largely the investment of time.  Spending hours writing code to save less than a second of runtime is not a good investment.  There was also the possibilty of not being able to implement improvements. 
   
