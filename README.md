@@ -19,7 +19,7 @@ All of the tickerVolumes 0 to 11 must be set to 0 because we add the existing ti
 
 Another important line of code used in the opening portion of the Macro is one used to count the number rows in the source data.  This will be used to review each row of data for the information we are searching for.
 
-![row count code]("C:\Users\erict\OneDrive\Desktop\git\HW2_Submissions\Resources\VBA_Challenge_Last_Row.png")
+![row count code](Resources/VBA_Challenge_Row_Count.png)
 
 ### Combing through the data
 
