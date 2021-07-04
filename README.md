@@ -15,7 +15,9 @@ Early in the code the creation of arrays, tickers, and writing of headers made f
   3. tickerPrice_Start(12) - contains the stock price at the beginning of the year, data type Single.
   4. tickerPrice_End(12) - contains the stock price at the end of the year, data typer Single.
 
-All of the tickerVolumes 0 to 11 must be set to 0 because we add the existing tickerVolume to each days individual ticker volume and any begining value would be inadvertantly added to the total for the year.  TickerPrice_Start and TickerPrice_End do not need to be initialized because they are only overwritten to be new values.
+All of the tickerVolumes 0 to 11 must be set to 0 (as shown in the picture below) because we add the existing tickerVolume to each days individual ticker volume and any begining value would be inadvertantly added to the total for the year.  TickerPrice_Start and TickerPrice_End do not need to be initialized because they are only overwritten to be new values.
+
+![Setting Ticker Volumes to Zero](Resources/VBA_Challenge_Init_TickerVolumes.png)
 
 Another important line of code used in the opening portion of the Macro is one used to count the number rows in the source data.  This will be used to review each row of data for the information we are searching for.
 
