@@ -2,9 +2,9 @@
 
 ## Project Overview 
 
-We have already created a macro that would calculate the annual volume and return for a list of stocks presorted by ticker and ascending by date.  The challenge presented is to refactor the code to improve its efficency and insert formatting.  The volume will be displayed with thousands separators, the cell color will represent positive or negative values and annual return  will display as a percentage with 1 decimal place.
+We have already created a macro that would calculate the annual volume and return a list of stocks with tickers, annual volume, and annual return.  The challenge presented is to refactor the code to improve its efficency and insert formatting.  The volume will be displayed with thousands separators, the cell color will represent positive or negative returns and annual return will display as a percentage with 1 decimal place. 
 
-## Results
+## Results 
 
 ### Setting up for success
 
@@ -13,7 +13,7 @@ Early in the code the creation of arrays, tickers, and writing of headers made f
   1. ticker(12) - contains the ticker symbol of each stock, data type String.
   2. tickerVolumes(12) - used to sum the daily volume throughout the year, data type Long.
   3. tickerPrice_Start(12) - contains the stock price at the beginning of the year, data type Single.
-  4. tickerPrice_End(12) - contains the stock price at the end of the year, data typer Single.
+  4. tickerPrice_End(12) - contains the stock price at the end of the year, data type Single.
 
 All of the tickerVolumes 0 to 11 must be set to 0 (as shown in the picture below) because we add the existing tickerVolume to each days individual ticker volume and any begining value would be inadvertantly added to the total for the year.  TickerPrice_Start and TickerPrice_End do not need to be initialized because they are only overwritten to be new values.
 
@@ -25,16 +25,28 @@ Another important line of code used in the opening portion of the Macro is one u
 
 ### Combing through the data
 
-
-
-Now we are ready to search each line for tickers, volumes, annual starting price and annual ending price.  We take advantage of the tickers being sorted by ticker and date to say that the price the 1st time a ticker appears is the tickerPrice_Start and when the ticker is going to change in the next row that is the ticketEnd_Price.  We also add each daily volume to the array for a given ticker. When the ticker changes the volume gets added to the new ticker volume.
+Now we are ready to search each line for tickers, volumes, annual starting price and annual ending price.  We take advantage of the tickers being sorted by ticker and date to say that the price the 1st time a ticker appears is the tickerPrice_Start and when the ticker is going to change in the next row that is the ticketEnd_Price.  We also add each daily volume to the array for a given ticker. When the ticker changes the volume gets added to the new tickerVolume.
   
 Noticing that the ticker will change in the next row of data is the key to much of the refactoring.  Because when we know this is the last line, we can advance the tickerIndex to begin looking for the next stock ticker.  Because of this we only loop through the data once.  In the original algorithm we looped through all 3000+ rows once for each of the 12 ticker indices.
   
 ![Low Row of Ticker Code](Resources/VBA_Challenge_Last_Row.png)
   
 ### Speed results
+In the original code the 2017 data ran in .875 seconds.
 
+![Original 2017 speed](Resources/VBA_Challenge_2017_Original_Code.png)
+
+After refactoring the 2017 ran in .141 seconds.
+
+![refactored 2017](Resources/VBA_Challenge_2017.png)
+
+In the original code the 2018 data ran in .875 seconds.
+
+![Original 2018 speed](Resources/VBA_Challenge_2018_Original_Code.png)
+
+After refactoring the 2018 ran in .148 seconds.
+
+![refactored 2018](Resources/VBA_Challenge_2018.png)
 
  
  ## Summary
