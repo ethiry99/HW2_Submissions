@@ -15,7 +15,7 @@ Early in the code the creation of arrays, tickers, and writing of headers made f
   3. tickerPrice_Start(12) - contains the stock price at the beginning of the year, data type Single.
   4. tickerPrice_End(12) - contains the stock price at the end of the year, data typer Single.
 
-All of the tickerVolumes 0 to 11 must be set to 0 because we add the existing tickerVolume to each days individual ticker volume and any begining value would be inadvertantly added to the total for the year.  TickerPrice_Start and TickerPrice_End do not need to be initialized because they are only overwritten be new values.
+All of the tickerVolumes 0 to 11 must be set to 0 because we add the existing tickerVolume to each days individual ticker volume and any begining value would be inadvertantly added to the total for the year.  TickerPrice_Start and TickerPrice_End do not need to be initialized because they are only overwritten to be new values.
 
 Another important line of code used in the opening portion of the Macro is one used to count the number rows in the source data.  This will be used to review each row of data for the information we are searching for.
 
@@ -23,7 +23,9 @@ Another important line of code used in the opening portion of the Macro is one u
 
 ### Combing through the data
 
-Now we are ready to search each line for tickers, volumes, annual starting price and annual ending price.  We take advantage of the tickers being sorted by ticket and date to say that the price the 1st time a ticket appears is the tickerPrice_Start and the ticker is going to change in the next row that is the ticketEnd_Price.  We also add each daily volume to the array for a given ticker. When the ticker changes the volume volumes get added to the new ticket volume.
+
+
+Now we are ready to search each line for tickers, volumes, annual starting price and annual ending price.  We take advantage of the tickers being sorted by ticker and date to say that the price the 1st time a ticker appears is the tickerPrice_Start and when the ticker is going to change in the next row that is the ticketEnd_Price.  We also add each daily volume to the array for a given ticker. When the ticker changes the volume gets added to the new ticker volume.
   
 Noticing that the ticker will change in the next row of data is the key to much of the refactoring.  Because when we know this is the last line, we can advance the tickerIndex to begin looking for the next stock ticker.  Because of this we only loop through the data once.  In the original algorithm we looped through all 3000+ rows once for each of the 12 ticker indices.
   
