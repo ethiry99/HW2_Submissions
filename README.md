@@ -34,6 +34,8 @@ Noticing that the ticker will change in the next row of data is the key to much 
 ![Low Row of Ticker Code](Resources/VBA_Challenge_Last_Row.png)
   
 ### Speed results
+
+
  
  ## Summary
   
