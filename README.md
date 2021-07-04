@@ -27,7 +27,7 @@ Now we are ready to search each line for tickers, volumes, annual starting price
   
 Noticing that the ticker will change in the next row of data is the key to much of the refactoring.  Because when we know this is the last line, we can advance the tickerIndex to begin looking for the next stock ticker.  Because of this we only loop through the data once.  In the original algorithm we looped through all 3000+ rows once for each of the 12 ticker indices.
   
-<Insert last row snip>  
+![Low Row of Ticker Code](Resources/VBA_Challenge_Last_Row.png)
   
 ### Speed results
  
